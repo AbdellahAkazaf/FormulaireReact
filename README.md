@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+# Formulaire d'Ajout de Facture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une application React qui fournit un formulaire d'ajout de facture avec validation des entrées. Le formulaire permet aux utilisateurs de saisir des informations telles que le nom, le prénom, le nom de la structure juridique de facturation, le mois et la date de facturation, le montant HT, et de télécharger une facture en format PDF.
 
-Currently, two official plugins are available:
+## Technologie Utilisée
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** : Une bibliothèque JavaScript pour construire des interfaces utilisateur.
+- **Formik** : Une bibliothèque pour la gestion des formulaires en React.
+- **Yup** : Un constructeur de schéma JavaScript pour la validation des valeurs du formulaire.
 
-## Expanding the ESLint configuration
+## Fonctionnalités
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Validation du formulaire en temps réel avec des messages d'erreur spécifiques à chaque champ.
+- Sélection du mois de facturation à partir d'une liste déroulante.
+- Téléchargement de fichiers avec une validation spécifique pour les fichiers PDF.
+- Affichage dynamique des messages d'erreur liés à la validation des champs du formulaire.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
